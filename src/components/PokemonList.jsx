@@ -2,7 +2,9 @@
 function PokemonList({ pokemon }) {
   return (
     <div>
-      {pokemon}
+      {pokemon.map(p => (
+        <div>{p}</div>
+      ))}
     </div>
   )
 }
