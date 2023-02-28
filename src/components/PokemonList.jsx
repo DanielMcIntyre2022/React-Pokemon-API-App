@@ -1,7 +1,9 @@
 
-function PokemonList() {
+function PokemonList({ pokemon }) {
   return (
-    <div>PokemonLists</div>
+    <div>
+      {pokemon}
+    </div>
   )
 }
 
