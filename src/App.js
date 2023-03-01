@@ -40,8 +40,8 @@ function App() {
       <div>
          <PokemonList pokemon={pokemon}/>
          <Paginaton
-            goToNextPage={goToNextPage}
-            goToPrevPage={goToPrevPage}
+            goToNextPage={nextPageUrl ? goToNextPage : null}
+            goToPrevPage={prevPageUrl ? goToPrevPage : null}
          />
       </div>
     </div>
