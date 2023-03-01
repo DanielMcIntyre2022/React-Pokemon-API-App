@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PokemonList from './components/PokemonList';
+import Paginaton from './components/Paginaton';
 
 function App() {
 
@@ -38,6 +39,10 @@ function App() {
     <div className="App">
       <div>
          <PokemonList pokemon={pokemon}/>
+         <Paginaton
+            goToNextPage={goToNextPage}
+            goToPrevPage={goToPrevPage}
+         />
       </div>
     </div>
   );

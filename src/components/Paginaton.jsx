@@ -1,5 +1,5 @@
 
-function Paginaton() {
+function Paginaton({ goToNextPage, goToPrevPage}) {
   return (
     <div>Paginaton</div>
   )
