@@ -9,18 +9,22 @@ function App() {
   const [ currentPageUrl, setCurrentPageUrl ] = useState("https://pokeapi.co/api/v2/pokemon");
   const [ nextPageUrl, setNextPageUrl ] = useState();
   const [ prevPageUrl, setPrevPageUrl ] = useState();
+  const [loading, setLoading ] = useState(true);
 
   useEffect(() => {
-
+      setLoading(true)
       axios.get('https://pokeapi.co/api/v2/pokemon')
-      .then(response => {
-      const data = response.data.results
-      setNextPageUrl(response.data.next)
-      setPrevPageUrl(response.data.previous)
-      setPokemon(data.map(p => p.name))
+        .then(response => {
+        const data = response.data.results
+        setLoading(false)
+        setNextPageUrl(response.data.next)
+        setPrevPageUrl(response.data.previous)
+        setPokemon(data.map(p => p.name))
   });
 
   },[currentPageUrl]);
+
+  if (loading ) return "Loading..."
 
   return (
     <div className="App">
