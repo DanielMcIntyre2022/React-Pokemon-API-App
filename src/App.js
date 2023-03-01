@@ -24,6 +24,14 @@ function App() {
 
   },[currentPageUrl]);
 
+  const goToNextPage = () => {
+    setCurrentPageUrl(nextPageUrl)
+  };
+
+  const goToPrevPage = () => {
+    setCurrentPageUrl(prevPageUrl)
+  };
+
   if (loading ) return "Loading..."
 
   return (
