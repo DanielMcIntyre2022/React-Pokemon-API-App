@@ -3,7 +3,9 @@ function PokemonList({ pokemon }) {
   return (
     <div>
       {pokemon.map(p => (
-        <div>{p}</div>
+        <div key={p}>
+          {p}
+        </div>
       ))}
     </div>
   )
