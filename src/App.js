@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
       setLoading(true)
-      axios.get('https://pokeapi.co/api/v2/pokemon')
+      axios.get(currentPageUrl)
         .then(response => {
         const data = response.data.results
         setLoading(false)
