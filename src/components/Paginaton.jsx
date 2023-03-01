@@ -1,7 +1,10 @@
 
 function Paginaton({ goToNextPage, goToPrevPage}) {
   return (
-    <div>Paginaton</div>
+    <div>
+      <button onClick={goToPrevPage}>Previous</button>
+      <button onClick={goToNextPage}>Next</button>
+    </div>
   )
 }
 
